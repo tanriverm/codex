@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Snake</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="app">
+      <section class="panel" aria-labelledby="game-title">
+        <div class="panel__header">
+          <div>
+            <p class="eyebrow">Classic Arcade</p>
+            <h1 id="game-title">Snake</h1>
+          </div>
+          <div class="scoreboard" aria-live="polite">
+            <span>Score</span>
+            <strong id="score">0</strong>
+          </div>
+        </div>
+
+        <div class="statusbar">
+          <p id="status">Press any arrow key or WASD to begin.</p>
+          <div class="statusbar__actions">
+            <button id="pause-button" type="button">Pause</button>
+            <button id="restart-button" type="button">Restart</button>
+          </div>
+        </div>
+
+        <div class="board-wrap">
+          <div
+            id="board"
+            class="board"
+            role="grid"
+            aria-label="Snake game board"
+          ></div>
+        </div>
+
+        <div class="controls" aria-label="Touch controls">
+          <button class="controls__button" data-direction="up" type="button">
+            Up
+          </button>
+          <div class="controls__row">
+            <button class="controls__button" data-direction="left" type="button">
+              Left
+            </button>
+            <button class="controls__button" data-direction="down" type="button">
+              Down
+            </button>
+            <button class="controls__button" data-direction="right" type="button">
+              Right
+            </button>
+          </div>
+        </div>
+
+        <p class="help">Move with arrow keys or WASD. Press space to pause.</p>
+      </section>
+    </main>
+
+    <script type="module" src="./src/main.js"></script>
+  </body>
+</html>
