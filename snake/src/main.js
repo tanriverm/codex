@@ -103,6 +103,8 @@ function restartGame() {
 
 function syncPauseButton() {
   pauseButton.textContent = state.status === "paused" ? "Resume" : "Pause";
+  pauseButton.disabled =
+    state.status === "idle" || state.status === "game-over";
 }
 
 function render() {
